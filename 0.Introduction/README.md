@@ -27,3 +27,7 @@ Docker alleviates these issues because an application in a container will run th
 *Parity is a key to why Docker dominates deployments, but it also makes Docker an exceptional tool for developers, especially when working on applications in teams.*
 
 For years, other solutions such as VM's and [Continuous Integration](https://www.thoughtworks.com/continuous-integration) have given teams work-arounds for parity issues. Containerizing applications throughout the entire development lifecycle, through deployment, enables teams to capitalize on the inherent parity.
+
+## Getting Started
+
+Docker runs as an application, so it's as simple as installing via the [Docker Installation Site](https://docs.docker.com/engine/installation/). Once installed and running the command `docker` should be available and list the usage information.
