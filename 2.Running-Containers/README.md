@@ -10,7 +10,7 @@ Running docker images (as containers) is done via the [`run`](https://docs.docke
 docker run <repo>/<image>
 ```
 
-An easy example of this is the following:
+#### :arrow_forward: Example Run Command
 
 ```
 docker run hello-world
@@ -24,7 +24,7 @@ A core feature of Docker is automation; being able to run pre-configured contain
 
 > The -it instructs Docker to allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container
 
-#### Example Interactive Run
+#### :arrow_forward: Example Interactive Run
 
 ```
 docker run -it ubuntu
@@ -60,7 +60,7 @@ Mounting volumes allows the container to interact with the host machines file sy
 docker run -v <local-path>:<mount-point> <image>
 ```
 
-#### Example Volume Mount
+#### :arrow_forward: Example Volume Mount
 
 ```
 docker run -it --rm -v $PWD:/foo ubuntu
@@ -78,7 +78,7 @@ Exposing ports is a common practice as it allows containers to connect to other 
 docker run -p <local-port>:<container-port>
 ```
 
-#### Example Port Expose
+#### :arrow_forward: Example Port Expose
 
 ```
 docker run --rm -p 8080:80 httpd
@@ -94,7 +94,7 @@ Enviornment variables allows configuration for any services or applications to b
 docker run -e <NAME>=<VALUE> <image>
 ```
 
-#### Example Environment Variable
+#### :arrow_forward: Example Environment Variable
 
 ```
 docker run -it --rm -e FOO=bar ubuntu
@@ -110,7 +110,7 @@ By passing in commands via the `run` command, Docker will execute a command insi
 docker run <image> <command>
 ```
 
-#### Example Command Execution
+#### :arrow_forward: Example Command Execution
 
 ```
 docker run --rm ubuntu echo "hello world"
