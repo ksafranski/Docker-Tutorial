@@ -2,6 +2,10 @@
 
 The Docker Client refers to the command-line interface for interacting with the Docker daemon.
 
+## Note
+
+In the below examples, the convention `<repo>/<image>` is used, however, local images (and even certain remotes) may only be referred to by their `<image>`.
+
 ## Images
 
 Docker images are the "snapshots" which are pre-configured containers that can be run to perform tasks or start services.
