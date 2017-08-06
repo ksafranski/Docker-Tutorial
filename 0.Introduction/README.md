@@ -1,9 +1,5 @@
 # Introduction
 
-## Goal of this Tutorial
-
-The goal of this tutorial is to present an introduction into using Docker (and related tools) to allow those with little, or no, experience to start using Docker.
-
 ## What Is Docker?
 
 *The Official Explanation:*
