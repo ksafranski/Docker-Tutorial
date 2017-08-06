@@ -50,3 +50,68 @@ docker run --rm <image>
 
 After the execution of the image is complete and the container has stopped, the process artifact will automatically be removed.
 
+### Volumes
+
+Mounting volumes allows the container to interact with the host machines file system at a specific mount-point:
+
+```
+docker run -v <local-path>:<mount-point> <image>
+```
+
+For example:
+
+```
+docker run -it --rm -v $PWD:/foo ubuntu
+```
+
+The command will run the container and mount the current working directory to the container's `/foo`. Once the container is started it is possible to `cd /foo` then `ls` to see the contents.
+
+This works like a standard mount in a Unix/Linux system, and any changes made on either the host or guest machines will be reflected in both places.
+
+### Expose (Ports)
+
+Exposing ports is a common practice as it allows containers to connect to other services, and other services to connect to containers:
+
+```
+docker run -p <local-port>:<container-port>
+```
+
+For example:
+
+```
+docker run --rm -p 8080:80 httpd
+```
+
+The command will pull and run Apache's HTTP service with the guest's port `80` exposed through the host's port `8080`. This can be seen by navigating to `http://localhost:8080` in a web browser.
+
+### Environment Variables
+
+Enviornment variables allows configuration for any services or applications to be passed to a container:
+
+```
+docker run -e <NAME>=<VALUE> <image>
+```
+
+For example:
+
+```
+docker run -it --rm -e FOO=bar ubuntu
+```
+
+The command will set the environment variable `FOO` to `bar` and start the container. The value can be seen by running `echo $FOO` inside the container's interactive session.
+
+### Running Commands
+
+By passing in commands via the `run` command, Docker will execute a command inside of the container:
+
+```
+docker run <image> <command>
+```
+
+For example:
+
+```
+docker run --rm ubuntu echo "hello world"
+```
+
+The command will start the container, print `hello world` and then exit the container.
