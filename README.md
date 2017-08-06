@@ -14,3 +14,9 @@ The goal of this tutorial is to present an introduction into using Docker (and r
 3. [Working With Dockerfiles](/3.Dockerfiles)
 4. [Hosting Docker Images](/4.Hosting)
 5. [Docker Utilities and Tools](/5.Utils)
+
+## Playground
+
+Obviously, having Docker installed locally is good, but there's an alternative that allows for playing with Docker via a web browser:
+
+*[Play-With-Docker](http://labs.play-with-docker.com/)*
