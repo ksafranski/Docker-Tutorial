@@ -6,6 +6,7 @@ const port = process.env.PORT || 8080
 
 // Endpoint at root with optional `name` param
 app.get('/:name?', (req, res) => {
+  console.log(`${Date.now()} Request with name param ${req.params.name || 'N/A'}`)
   res.status(200).send(`<h1>Hello${req.params.name ? ' ' + req.params.name : ''}!!!</h1>`)
 })
 
