@@ -24,6 +24,8 @@ A core feature of Docker is automation; being able to run pre-configured contain
 
 > The -it instructs Docker to allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container
 
+#### Example Interactive Run
+
 ```
 docker run -it ubuntu
 ```
@@ -58,7 +60,7 @@ Mounting volumes allows the container to interact with the host machines file sy
 docker run -v <local-path>:<mount-point> <image>
 ```
 
-For example:
+#### Example Volume Mount
 
 ```
 docker run -it --rm -v $PWD:/foo ubuntu
@@ -76,7 +78,7 @@ Exposing ports is a common practice as it allows containers to connect to other 
 docker run -p <local-port>:<container-port>
 ```
 
-For example:
+#### Example Port Expose
 
 ```
 docker run --rm -p 8080:80 httpd
@@ -92,7 +94,7 @@ Enviornment variables allows configuration for any services or applications to b
 docker run -e <NAME>=<VALUE> <image>
 ```
 
-For example:
+#### Example Environment Variable
 
 ```
 docker run -it --rm -e FOO=bar ubuntu
@@ -108,7 +110,7 @@ By passing in commands via the `run` command, Docker will execute a command insi
 docker run <image> <command>
 ```
 
-For example:
+#### Example Command Execution
 
 ```
 docker run --rm ubuntu echo "hello world"
