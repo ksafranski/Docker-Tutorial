@@ -1,4 +1,4 @@
-# Docker
+# Docker Tutorial
 
 This repository is a step-by-step tutorial on some of the core points for understanding [Docker](https://docker.com).
 
@@ -20,3 +20,7 @@ The goal of this tutorial is to present an introduction into using Docker (and r
 Obviously, having Docker installed locally is good, but there's an alternative that allows for playing with Docker via a web browser:
 
 **[Play-With-Docker](http://labs.play-with-docker.com/)**
+
+---
+
+**[Next: 0. Introduction >>](../0.Introduction)**

@@ -1,3 +1,7 @@
+**[<< Previous: 2. Running Containers](../2.Running-Containers)**
+
+---
+
 # Working With Dockerfiles
 
 While one way to create Docker images is to `commit` containers and push to a repo, the most widely accepted method is to utilize a [Dockerfile](https://docs.docker.com/engine/reference/builder/)
@@ -75,3 +79,7 @@ Often times when testing this can be easily run inside of the same directory as 
 ```
 dockerfile build . -t <name>
 ```
+
+---
+
+**[Next: 4. Hosting >>](../4.Hosting)**
