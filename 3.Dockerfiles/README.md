@@ -1,4 +1,4 @@
-**[<< Previous: 2. Running Containers](../2.Running-Containers)**
+**[<< Previous: 2. Running Containers](/2.Running-Containers)**
 
 ---
 
@@ -82,4 +82,4 @@ dockerfile build . -t <name>
 
 ---
 
-**[Next: 4. Hosting >>](../4.Hosting)**
+**[Next: 4. Hosting >>](/4.Hosting)**

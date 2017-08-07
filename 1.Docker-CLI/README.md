@@ -1,4 +1,4 @@
-**[<< Previous: 0. Introduction](../0.Introduction)**
+**[<< Previous: 0. Introduction](/0.Introduction)**
 
 ---
 
@@ -72,4 +72,4 @@ This view shows *running* containers. Containers, not long-running, can be shown
 
 ---
 
-**[Next: 2. Running Containers >>](../2.Running-Containers)**
+**[Next: 2. Running Containers >>](/2.Running-Containers)**

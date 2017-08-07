@@ -1,4 +1,4 @@
-**[<< Previous: 4. Hosting](../4.Hosting)**
+**[<< Previous: 4. Hosting](/4.Hosting)**
 
 ---
 

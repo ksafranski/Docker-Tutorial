@@ -23,4 +23,4 @@ Obviously, having Docker installed locally is good, but there's an alternative t
 
 ---
 
-**[Next: 0. Introduction >>](../0.Introduction)**
+**[Next: 0. Introduction >>](/0.Introduction)**

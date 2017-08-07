@@ -1,4 +1,4 @@
-**[<< Previous: 1. Docker CLI](../1.Docker-CLI)**
+**[<< Previous: 1. Docker CLI](/1.Docker-CLI)**
 
 ---
 
@@ -124,4 +124,4 @@ The command will start the container, print `hello world` and then exit the cont
 
 ---
 
-**[Next: 3. Dockerfiles >>](../3.Dockerfiles)**
+**[Next: 3. Dockerfiles >>](/3.Dockerfiles)**

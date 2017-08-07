@@ -1,4 +1,4 @@
-**[<< Previous: 3. Dockerfiles >>](../3.Dockerfiles)**
+**[<< Previous: 3. Dockerfiles >>](/3.Dockerfiles)**
 
 ---
 
@@ -6,4 +6,4 @@
 
 ---
 
-**[Next: 5. Utilities and Tools >>](../5.Utils)**
+**[Next: 5. Utilities and Tools >>](/5.Utils)**
