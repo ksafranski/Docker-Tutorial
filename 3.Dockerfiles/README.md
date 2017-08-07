@@ -80,6 +80,54 @@ Often times when testing this can be easily run inside of the same directory as 
 dockerfile build . -t <name>
 ```
 
+## Example Dockerfile
+
+The below example is available in the [`./example`](/3.Dockerfiles/example) directory along with a small [NodeJS](http://nodejs.com) application that exposes a service on port `8080` by default:
+
+```
+FROM mhart/alpine-node:6
+
+COPY ./app /app
+
+WORKDIR /app
+
+RUN npm install
+
+ENV PORT=8080
+
+EXPOSE 8080
+
+ENTRYPOINT [ "node", "index.js" ]
+```
+
+### Build Image
+
+To build the image, `cd` into the `./example` directory, then run the following:
+
+```
+docker build . -t demo-app
+```
+
+### Running the Image
+
+Once built the image can be run using the following:
+
+```
+docker run --rm demo-app
+```
+
+The container will run the application which is accessible at `http://localhost:8080`. The application will echo `Hello!!!`, and supports an optional URL parameter which can be sent via `http://localhost:8080/<name>` and will echo `Hello <name>!!!`.
+
+### Stopping the Container
+
+The container will run indefinetly, to stop, open another shell (with access to Docker) and run `docker ps` to find the ID of the container. Then run the following:
+
+```
+docker stop <id>
+```
+
+_Note: Commands in docker referencing the ID of a container do not require the full ID; passing the first 5 or 6 characters will be enough for Docker to recognize the ID_
+
 ---
 
 **[Next: 4. Hosting >>](/4.Hosting)**
