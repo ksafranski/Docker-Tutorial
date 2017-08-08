@@ -42,7 +42,7 @@ The use of Compose revolves around creating instances that start by simply runni
 
 ### Binci
 
-[Binci](https://github.com/binci/binci) is a tool designed for running environments similar to Compose. The main difference is it's focus on light-weight, task-based ephemeral workflows. Binci is describes as:
+[Binci](https://github.com/binci/binci) is a tool designed for running environments similar to Compose. The main difference is its focus on light-weight, task-based ephemeral workflows. Binci is described as:
 
 > Binci is a utility that allows you to easily containerize your development workflow using Docker. Simply put, it's like having a cleanroom for all of your development processes which contain services (like databases) without needing to setup and maintain these environments manually.
 
