@@ -24,7 +24,7 @@ The image `hello-world` will be `pull`ed, and then executed, outputting some tex
 
 ### Running Interactive Containers
 
-A core feature of Docker is automation; being able to run pre-configured containers that execute tasks or run services without interaction. However, running containers with the `-it` flag.
+A core feature of Docker is automation; being able to run pre-configured containers that execute tasks or run services without interaction. However, running containers with the `-it` flag allows for interaction with the running container.
 
 > The -it instructs Docker to allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container
 
@@ -40,15 +40,15 @@ Exiting the shell (`exit` + `<return`>) will end the session, and in turn, stop 
 
 ### Stopped Containers and Cleanup
 
-After exiting, running `docker ps -a` will show that container (not visible without `-a`). This is because the container was stopped, but not removed. The container is not removed because it now has a state (any action performed while the container was running). The image could be `commit`ed and saved, creating a new layer and a new snapshot.
+After exiting, running `docker ps -a` will show that container (not visible without `-a`). This is because the container was stopped, but not removed. The container is not removed because it now has a state (any action performed while the container was running). The image could be `commit`'ed and saved, creating a new layer and a new snapshot.
 
-However, typically the action after running a container should be to remove it, preventing a build-up of artifacts. This can be done with the [`rm`](https://docs.docker.com/v1.11/engine/reference/commandline/rm/) command:
+However, typically the action after running a container is to remove it, preventing a build-up of artifacts. This can be done with the [`rm`](https://docs.docker.com/v1.11/engine/reference/commandline/rm/) command:
 
 ```
 docker rm <hash|name>
 ```
 
-*This process can be automated, by simply adding the `--rm` flag to the run command:*
+*This process can be automated, by simply adding the `--rm` flag to the `run` command:*
 
 ```
 docker run --rm <image>
@@ -58,7 +58,7 @@ After the execution of the image is complete and the container has stopped, the 
 
 ### Volumes
 
-Mounting volumes allows the container to interact with the host machines file system at a specific mount-point:
+Mounting volumes allows the container to interact with the host machine's file system at a specific mount-point:
 
 ```
 docker run -v <local-path>:<mount-point> <image>
@@ -70,7 +70,7 @@ docker run -v <local-path>:<mount-point> <image>
 docker run -it --rm -v $PWD:/foo ubuntu
 ```
 
-The command will run the container and mount the current working directory to the container's `/foo`. Once the container is started it is possible to `cd /foo` then `ls` to see the contents.
+The command will run the container and mount the current working directory to the container's `/foo`. Once the container is started it is possible to `cd /foo`, then `ls` to see the contents.
 
 This works like a standard mount in a Unix/Linux system, and any changes made on either the host or guest machines will be reflected in both places.
 
@@ -92,7 +92,7 @@ The command will pull and run Apache's HTTP service with the guest's port `80` e
 
 ### Environment Variables
 
-Enviornment variables allows configuration for any services or applications to be passed to a container:
+Enviornment variables allow configuration for any services or applications to be passed to a container:
 
 ```
 docker run -e <NAME>=<VALUE> <image>

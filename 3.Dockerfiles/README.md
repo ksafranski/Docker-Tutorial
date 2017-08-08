@@ -10,6 +10,8 @@ Dockerfiles are configurations which instruct an image build. They are easily ma
 
 A Dockerfile is made up of a series of commands which `build` to create an image.
 
+**A full list of available commands is available in the [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/).**
+
 ## The Base - `FROM`
 
 The [`FROM`](https://docs.docker.com/engine/reference/builder/#from) command specifies a base image to use. Containers use a base image which can be as simple as an Operating System or as complex as a highly configured service image to build upon.
@@ -28,7 +30,7 @@ COPY <src-path> <destination-path>
 
 ## Setting the Workind Directory - `WORKDIR`
 
-A container will run in the root unless specified to do otherwise. The [`WORKDIR`](https://docs.docker.com/engine/reference/builder/#workdir) command sets the current working directory for an image.
+A container will run in the root unless specified to do otherwise. The [`WORKDIR`](https://docs.docker.com/engine/reference/builder/#workdir) command sets the current working directory, inside the container, for an image.
 
 ```
 WORKDIR <path>
@@ -36,7 +38,7 @@ WORKDIR <path>
 
 ## Running Setup Commands - `RUN`
 
-Often times it is neccesary to run setup commands, install dependencies, etc. The [`RUN`](https://docs.docker.com/engine/reference/builder/#run) command allows these commands to be run during build.
+Often times it is neccesary to run setup commands, install dependencies, etc. The [`RUN`](https://docs.docker.com/engine/reference/builder/#run) command allows these commands to be executed during build.
 
 ```
 RUN <command(s)>
@@ -52,7 +54,7 @@ ENV <KEY>=<value>
 
 ## Exposing Ports - `EXPOSE`
 
-Containers often times need to expose ports to communicate with other services, or present an accessible API. The [`EXPOSE`]() command allows these ports to be defined in the Dockerfile.
+Containers often times need to expose ports to communicate with other services, or present an accessible API. The [`EXPOSE`](https://docs.docker.com/engine/reference/builder/#expose) command allows these ports to be defined in the Dockerfile.
 
 ```
 EXPOSE <port>
@@ -74,7 +76,7 @@ The [`build`](https://docs.docker.com/engine/reference/commandline/build/) comma
 docker build <path-to-dockerfile> -t <name>
 ```
 
-Often times when testing this can be easily run inside of the same directory as the Dockerfile:
+Often times this can be easily run inside of the same directory as the Dockerfile using the following:
 
 ```
 dockerfile build . -t <name>
