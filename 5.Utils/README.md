@@ -40,6 +40,8 @@ Compose uses YAML configuration file, in conjunction with a base Dockerfile, to 
 
 The use of Compose revolves around creating instances that start by simply running `compose up`, starting the environment and then running until exit, or instructed to exit.
 
+**[Example NodeJS App with Docker-Compose](https://blog.codeship.com/using-docker-compose-for-nodejs-development/)**
+
 ### Binci
 
 [Binci](https://github.com/binci/binci) is a tool designed for running environments similar to Compose. The main difference is its focus on light-weight, task-based ephemeral workflows. Binci is described as:
@@ -47,3 +49,5 @@ The use of Compose revolves around creating instances that start by simply runni
 > Binci is a utility that allows you to easily containerize your development workflow using Docker. Simply put, it's like having a cleanroom for all of your development processes which contain services (like databases) without needing to setup and maintain these environments manually.
 
 Binci's task-oriented approach is geared toward local development; allowing for simple management of ephemeral tasks like testing, linting, application builds, etc.
+
+**[Example NodeJS Project with Binci](https://github.com/binci/binci/tree/master/test/project)**
