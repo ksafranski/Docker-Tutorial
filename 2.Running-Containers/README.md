@@ -20,7 +20,7 @@ docker run <repo>/<image>
 docker run hello-world
 ```
 
-The image `hello-world` will be `pull`ed, and then executed, outputting some text in the shell.
+The image `hello-world` will be `pull`'d, and then executed, outputting some text in the shell.
 
 ### Running Interactive Containers
 
