@@ -6,13 +6,19 @@
 
 The Docker Client refers to the command-line interface for interacting with the Docker daemon.
 
-## Note
-
-In the below examples, the convention `<repo>/<image>` is used, however, local images (and even certain remotes) may only be referred to by their `<image>`.
-
 ## Images
 
 Docker images are the "snapshots" which are pre-configured containers that can be run to perform tasks or start services.
+
+### Naming and Tags
+
+In the below examples, the convention `<repo>/<image>` is used, however, local images (and even certain remotes) may only be referred to by their `<image>`.
+
+Images can be called by a full `<repo>/<image>:<tag>` convention, however, most often the tag desired is `latest`, which is what Docker will `pull` by default.
+
+The `latest` tag is a bit confusing as it would _seem_ to indicate "the latest version", however, that's not always the case. There is a great article about [confusion around the `latest` tag](http://container-solutions.com/docker-latest-confusion/).
+
+Also, it is worth noting that using the `latest` will not update that image automatically. If something changes on the image it must be `pull`'d again in order to update the layers.
 
 ### Listing Local Images
 
