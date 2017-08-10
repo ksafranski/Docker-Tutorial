@@ -79,7 +79,7 @@ docker build <path-to-dockerfile> -t <name>
 Often times this can be easily run inside of the same directory as the Dockerfile using the following:
 
 ```
-dockerfile build . -t <name>
+docker build . -t <name>
 ```
 
 ## Example Dockerfile
